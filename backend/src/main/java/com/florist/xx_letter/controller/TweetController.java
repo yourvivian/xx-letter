@@ -1,24 +1,12 @@
-package xyz.bijit.swagger;
+package com.florist.xx_letter.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/tweets")
 public class TweetController {
-    @Autowired
-    private TweetService tweetService;
-
-    @PostMapping("/add")
-    public void addTweet() {
-        tweetService.addTweet();
-    }
-
-    @GetMapping("/view")
-    public List<Tweet> viewTweets() {
-        return tweetService.getTweets();
-    }
-
     @GetMapping("/hello")
     public String hello(){
         return "Hello World!";
